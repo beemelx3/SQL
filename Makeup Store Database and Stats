@@ -1,0 +1,48 @@
+CREATE TABLE Makeup (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    price INTEGER,
+    quantity TEXT,
+    brand TEXT);
+    
+INSERT INTO Makeup VALUES (1, "Mascara", "5.99", "200", "LOREAL");
+
+INSERT INTO Makeup VALUES (2, "Blush", "10.99", 300, "Huda Beauty");
+
+INSERT INTO Makeup VALUES (3, "Lipstick", "16.99" ,"500", "Kylie Cosmetics");
+
+INSERT INTO Makeup VALUES (4, "Concealer", "7.99","700", "Tarte");
+
+INSERT INTO Makeup VALUES (5, "Eyeliner", "6.99", "400", "Urban Decay");
+
+INSERT INTO Makeup VALUES (6, "Foundation", "21.99", "700", "Fenty");
+
+INSERT INTO Makeup VALUES (7, "Lipgloss", "6.99", "300", "Glossier");
+
+INSERT INTO Makeup VALUES (8, "Highlighter", "9.99","200", "Laura Mercier");
+
+INSERT INTO Makeup VALUES (9, "Bronzer", "8.99","200", "Too Faced");
+
+INSERT INTO Makeup VALUES (10, "Primer", "9.99","100", "Charlotte Tilbury");
+
+INSERT INTO Makeup VALUES (11, "BB Cream", "3.99", "100", "Purlisse");
+
+INSERT INTO Makeup VALUES (12, "Eyelashes", "5.99", "300", "Ardell");
+
+INSERT INTO Makeup VALUES (13, "Eyebrow pencil", "12.99", "500", "Anastasia Beverly Hills");
+
+INSERT INTO Makeup VALUES (14, "Cleansing balm", "5.99", "400", "ELF");
+
+INSERT INTO Makeup VALUES (15, "Makeup Remover wipes", "10.99", "300", "Garnier");
+
+---display the data
+SELECT * FROM Makeup;
+
+---order all items by price from least to greatest 
+SELECT * FROM Makeup ORDER BY price asc;
+
+---what is the average of all items in the section?
+SELECT AVG(price) FROM Makeup;
+
+---which items cost no more than 9.99?
+SELECT * FROM Makeup WHERE price <=9.99 ORDER BY price;
